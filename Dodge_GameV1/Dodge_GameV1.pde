@@ -89,8 +89,8 @@ void setup() {
   y = new int[n];
   alive = new boolean [n];
 
-  tempx = -100;
-  tempy = -75;
+  tempx = 100;
+  tempy = -475;
 
   int i = 0;
   while (i < n) {
