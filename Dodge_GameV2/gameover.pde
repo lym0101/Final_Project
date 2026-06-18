@@ -6,7 +6,7 @@ void gameover() {
   fill(0, 255, 255);
   text("GAME OVER!", width/2, 300);
 
-  //show how high a score you got
+  //scoring display
   textSize(55);
   text("Score: " + score, width/2, 500);
 

@@ -1,17 +1,17 @@
 void game() {
   background(0, 100, 0);
 
-  //player paddle (floating rectangle)
+  //player paddle (floating rect)
   fill(255);
   rect(px, py, pd, ph);
 
-  //move the player left / right (half submerged at the edges)
+  //move the player left / right (rect block)
   if (akey     && px - pd/2 > 0)     px -= 8;
   if (dkey     && px + pd/2 < width) px += 8;
   if (leftkey  && px - pd/2 > 0)     px -= 8;
   if (rightkey && px + pd/2 < width) px += 8;
 
-  //falling balls (bricks)
+  //falling balls/bricks
   int i = 0;
   while (i < n) {
     if (alive[i] == true) {
@@ -42,8 +42,6 @@ void game() {
     text(round(timer/60.0), width/2, 100);
     timer = timer - 1;
   }
-
-  //out of lives -> game over
   if (lives <= 0) {
     mode = GAMEOVER;
   }

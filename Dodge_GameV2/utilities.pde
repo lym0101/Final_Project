@@ -2,7 +2,7 @@ void reset() {
   mode = INTRO;
   music.rewind();
   gameover.rewind();
-  //initialize paddle (floats above the bottom)
+  //initialize paddle (floats at the bottom)
   px = width/2;
   py = height - 160;
   pd = 120;            //paddle width
@@ -63,8 +63,6 @@ void brickLayout(int i) {
     fill(254, 252, 243);
   }
   circle(x[i], y[i], ballSize[i]);
-  //did this ball hit the player?
-  //true only when the ball and paddle overlap left-to-right AND up-and-down
   if (abs(x[i] - px) < pd/2 + ballSize[i]/2 && abs(y[i] - py) < ph/2 + ballSize[i]/2) {
     lives -= 1;
     failure.rewind();

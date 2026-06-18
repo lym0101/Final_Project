@@ -21,10 +21,10 @@ void rules() {
        "See how high a score you can get!", width/2, height/2 + 20);
 
   //back button
-  tactile(width/2, height - 80, 200, 80);
+  tactile(width/2-100, height - 120, 200, 80);
   stroke(255);
   rect(width/2, height - 80, 200, 80, 20);
-  fill(255);
+  fill(0);
   textSize(32);
   text("BACK", width/2, height - 80);
   noFill();

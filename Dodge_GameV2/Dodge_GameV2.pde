@@ -88,19 +88,21 @@ void setup() {
   
   //set up array of falling balls (bricks)
   n = 6;
-  x = new float[n];  //instantiation
+  x = new float[n];  //initiation
   y = new float[n];
   speed = new float[n];
   ballSize = new float[n];
   alive = new boolean [n];
 
-  //drop each ball in above the screen at a RANDOM spot, size and speed
+  //drop each ball in above the screen at a random spot, size and speed
   int i = 0;
   while (i < n) {
     respawn(i);
     alive[i] = true;
     i = i + 1;
   }
+  
+  //drawing gif background
   numberOfFrames = 42;
   gif = new PImage [numberOfFrames];
   
